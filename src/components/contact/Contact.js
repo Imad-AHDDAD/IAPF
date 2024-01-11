@@ -43,6 +43,8 @@ function Contact() {
           setBtnClass("enable");
         }
       }
+    }else {
+      toast.error("please fill all fields !");
     }
   }
 
