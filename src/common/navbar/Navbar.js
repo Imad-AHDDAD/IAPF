@@ -2,9 +2,13 @@ import {
   faBars,
   faBrain,
   faBusinessTime,
+  faContactCard,
+  faFile,
   faGraduationCap,
   faHome,
   faListCheck,
+  faRectangleAd,
+  faShapes,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -57,18 +61,32 @@ function Navbar(props) {
               <Link to="/imad-as-developer">
                 <li>Imad As Developer</li>
               </Link>
-              <Link
-                to="/imad-as-developer-cv"
-              >
+              <Link to="/imad-as-developer-cv">
                 <li>Curriculum Vitae</li>
               </Link>
             </>
           ) : (
-            <></>
+            <>
+              <Link to="">
+                <li>Logos</li>
+              </Link>
+              <Link to="">
+                <li>Business Cards</li>
+              </Link>
+              <Link to="">
+                <li>Banderoles</li>
+              </Link>
+              <Link to="/imad-as-designer/posters">
+                <li>Posters</li>
+              </Link>
+              <Link to="">
+                <li>Imad As Designer</li>
+              </Link>
+            </>
           )}
         </ul>
       </div>
-      {props.profile === "" ? (
+      {props.profile === "none" ? (
         <></>
       ) : props.profile === "developer" ? (
         <ul className="icons-menu">
@@ -134,7 +152,68 @@ function Navbar(props) {
           </Link>
         </ul>
       ) : (
-        <></>
+        <ul className="icons-menu">
+          <Link>
+            <li>
+              <FontAwesomeIcon
+                icon={faContactCard}
+                className={
+                  activeIcon === "bc"
+                    ? "menu-phone-icon active-btn"
+                    : "menu-phone-icon"
+                }
+              />
+            </li>
+          </Link>
+          <Link>
+            <li>
+              <FontAwesomeIcon
+                icon={faShapes}
+                className={
+                  activeIcon === "logo"
+                    ? "menu-phone-icon active-btn"
+                    : "menu-phone-icon"
+                }
+              />
+            </li>
+          </Link>
+          <Link to="/imad-as-designer/posters">
+            <li>
+              <FontAwesomeIcon
+                icon={faFile}
+                className={
+                  activeIcon === "poster"
+                    ? "menu-phone-icon active-btn"
+                    : "menu-phone-icon"
+                }
+              />
+            </li>
+          </Link>
+          <Link>
+            <li>
+              <FontAwesomeIcon
+                icon={faRectangleAd}
+                className={
+                  activeIcon === "banderole"
+                    ? "menu-phone-icon active-btn"
+                    : "menu-phone-icon"
+                }
+              />
+            </li>
+          </Link>
+          <Link to="/imad-as-designer">
+            <li>
+              <FontAwesomeIcon
+                icon={faHome}
+                className={
+                  activeIcon === "home"
+                    ? "menu-phone-icon active-btn"
+                    : "menu-phone-icon"
+                }
+              />
+            </li>
+          </Link>
+        </ul>
       )}
       <button onClick={switchIcon} className="bars-btn">
         <FontAwesomeIcon icon={icon} className="menu-bars" />

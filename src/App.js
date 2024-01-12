@@ -10,6 +10,8 @@ import Projects from "./components/developer-portfolio/Projects";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 import Cv from "./components/cv/Cv";
+import DesignerHome from "./components/designer-portfolio/DesignerHome";
+import Posters from "./components/designer-portfolio/Posters";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Route path="/about-imad-ahddad" element={<About />} />
         <Route path="/contact-imad-ahddad" element={<Contact />} />
         <Route path="/imad-as-developer-cv" element={<Cv />} />
+        <Route path="/imad-as-designer" element={<DesignerHome />} />
+        <Route path="/imad-as-designer/posters" element={<Posters />} />
       </Routes>
       <Footer />
     </BrowserRouter>
