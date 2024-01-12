@@ -947,13 +947,34 @@ html {
   font-size: 1.8rem;
 }
 
+.send-btn-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: .5rem;
+  height: 5rem;
+  position: relative;font-size: 1.7rem;
+  background-color: #0d9b0d;
+  color: var(--white-color);
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  width: 15rem;
+}
+
+.send-btn-div img {
+  height: 3rem;
+  position: absolute;
+  display: none;
+}
+
 .disable {
   background-color: #d3d3d3;
   color: #808080;
   cursor: not-allowed;
   font-size: 1.7rem;
   padding: 1rem 3rem;
-  margin-top: 0.7rem;
   border: none;
   border-radius: 0.3rem;
   width: 15rem;
@@ -964,7 +985,6 @@ html {
   background-color: #0d9b0d;
   color: var(--white-color);
   padding: 1rem 3rem;
-  margin-top: 0.7rem;
   border: none;
   border-radius: 0.3rem;
   cursor: pointer;

@@ -5,18 +5,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import loadingImg from "../../images/loading3.gif";
 
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [btnClass, setBtnClass] = useState("enable");
 
   async function sendEmail(event) {
     event.preventDefault();
     if (name !== "" && email !== "" && message !== "") {
-      if (btnClass === "enable") {
-        setBtnClass("disable");
+
+        showLoading()
         const url = "https://iap-backend.onrender.com/sendEmail";
         const data = {
           name: name,
@@ -28,24 +28,33 @@ function Contact() {
           axios.post(url, data).then(
             (res) => {
               toast.success(res.data.message);
-              setBtnClass("enable");
+              hideLoading()
               setName("");
               setEmail("");
               setMessage("");
             },
             (error) => {
               toast.error("internal error has occured !");
-              setBtnClass("enable");
+              hideLoading()
             }
           );
         } catch (error) {
           toast.error("internal error has occured !");
-          setBtnClass("enable");
+          hideLoading()
         }
-      }
-    }else {
+      
+    } else {
       toast.error("please fill all fields !");
     }
+  }
+
+  function showLoading() {
+    document.getElementById("loading").style.display = "block";
+    document.getElementById("sendBtn").style.display = "none";
+  }
+  function hideLoading() {
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("sendBtn").style.display = "block";
   }
 
   return (
@@ -95,14 +104,18 @@ function Contact() {
             placeholder="your message here"
             className="contact-message"
           />
-          <button
-            onClick={(e) => {
-              sendEmail(e);
-            }}
-            className={btnClass}
-          >
-            Send
-          </button>
+          <div className="send-btn-div">
+            <button
+            id="sendBtn"
+              onClick={(e) => {
+                sendEmail(e);
+              }}
+              className="enable"
+            >
+              Send
+            </button>
+            <img src={loadingImg} id="loading" alt="loading" />
+          </div>
         </form>
         <div className="contact-infos">
           <div className="contact-info">
