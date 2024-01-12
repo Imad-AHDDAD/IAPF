@@ -13,6 +13,7 @@ import Cv from "./components/cv/Cv";
 import DesignerHome from "./components/designer-portfolio/DesignerHome";
 import Posters from "./components/designer-portfolio/Posters";
 import Logos from "./components/designer-portfolio/Logos";
+import BusinessCards from "./components/designer-portfolio/BusinessCards";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/imad-as-designer" element={<DesignerHome />} />
         <Route path="/imad-as-designer/posters" element={<Posters />} />
         <Route path="/imad-as-designer/logos" element={<Logos />} />
+        <Route path="/imad-as-designer/businesscards" element={<BusinessCards />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -27,7 +27,7 @@ function Contact() {
         try {
           axios.post(url, data).then(
             (res) => {
-              toast.success(res.data.message);
+              toast.success("Thank You");
               hideLoading()
               setName("");
               setEmail("");

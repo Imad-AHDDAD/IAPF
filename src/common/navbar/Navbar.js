@@ -7,7 +7,6 @@ import {
   faGraduationCap,
   faHome,
   faListCheck,
-  faRectangleAd,
   faShapes,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
@@ -70,12 +69,12 @@ function Navbar(props) {
               <Link to="/imad-as-designer/logos">
                 <li>Logos</li>
               </Link>
-              <Link to="">
+              <Link to="/imad-as-designer/businesscards">
                 <li>Business Cards</li>
               </Link>
-              <Link to="">
+              {/* <Link to="">
                 <li>Banderoles</li>
-              </Link>
+              </Link> */}
               <Link to="/imad-as-designer/posters">
                 <li>Posters</li>
               </Link>
@@ -153,7 +152,7 @@ function Navbar(props) {
         </ul>
       ) : (
         <ul className="icons-menu">
-          <Link>
+          <Link to="/imad-as-designer/businesscards">
             <li>
               <FontAwesomeIcon
                 icon={faContactCard}
@@ -189,7 +188,7 @@ function Navbar(props) {
               />
             </li>
           </Link>
-          <Link>
+          {/* <Link>
             <li>
               <FontAwesomeIcon
                 icon={faRectangleAd}
@@ -200,7 +199,7 @@ function Navbar(props) {
                 }
               />
             </li>
-          </Link>
+          </Link> */}
           <Link to="/imad-as-designer">
             <li>
               <FontAwesomeIcon
