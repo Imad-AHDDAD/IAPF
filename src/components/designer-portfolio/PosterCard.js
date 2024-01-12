@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLeftLong, faRightLong } from "@fortawesome/free-solid-svg-icons";
@@ -6,6 +6,11 @@ import { faLeftLong, faRightLong } from "@fortawesome/free-solid-svg-icons";
 function PosterCard(props) {
   const images = props.images
   const [imageIndex, setImageIndex] = useState(0);
+  useEffect(() => {
+    images.forEach((image) => {
+      new Image().src = image;
+    });
+  }, [images]);
   const next = () => {
     if (imageIndex < images.length - 1) {
       setImageIndex(Number(imageIndex) + 1);
@@ -33,7 +38,7 @@ function PosterCard(props) {
         <div className="imagesNumber">
             {images.length} images
         </div>
-      </div>
+      </div> 
 
       <h1 className="title">{props.title}</h1>
     </div>

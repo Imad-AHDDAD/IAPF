@@ -79,7 +79,7 @@ function Navbar(props) {
               <Link to="/imad-as-designer/posters">
                 <li>Posters</li>
               </Link>
-              <Link to="">
+              <Link to="/imad-as-designer">
                 <li>Imad As Designer</li>
               </Link>
             </>

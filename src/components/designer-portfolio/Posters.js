@@ -26,7 +26,7 @@ function Posters() {
             require("../../images/designer/posters/jellaba/5.png"),
           ]}
         />
-        <PosterCard
+        <PosterCard 
           title="Graphic Design"
           images={[
             require("../../images/designer/posters/graphicdesign/p2.png"),
