@@ -67,7 +67,7 @@ function Navbar(props) {
             </>
           ) : (
             <>
-              <Link to="">
+              <Link to="/imad-as-designer/logos">
                 <li>Logos</li>
               </Link>
               <Link to="">
@@ -165,7 +165,7 @@ function Navbar(props) {
               />
             </li>
           </Link>
-          <Link>
+          <Link to="/imad-as-designer/logos">
             <li>
               <FontAwesomeIcon
                 icon={faShapes}
