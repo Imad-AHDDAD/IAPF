@@ -1112,7 +1112,7 @@ html {
 
 .posters-section .cards-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   width: 100%;
   padding: 2rem 10rem;
@@ -1140,7 +1140,6 @@ html {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 30rem;
   /*max-width: 30rem;*/
   overflow: hidden;
 }
